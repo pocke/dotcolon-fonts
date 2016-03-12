@@ -1,0 +1,20 @@
+pkgname=otf-route159
+pkgver=1.00
+pkgrel=1
+pkgdesc='an otf font'
+arch=('any')
+url='http://dotcolon.net/font/route159/'
+license=('ofl')
+depends=('fontconfig' 'xorg-font-utils')
+makedepends=('unzip')
+install=otf.install
+source=(http://dotcolon.net/DL/font/route159_100.zip)
+
+package() {
+  install -d "$pkgdir/usr/share/fonts/OTF"
+  install -m644 *.otf "$pkgdir/usr/share/fonts/OTF/"
+  install -d "$pkgdir/usr/share/licenses/$pkgname"
+  install -m644 OFL.txt "$pkgdir/usr/share/licenses/$pkgname/"
+}
+
+md5sums=('c38f588c2d625e7fe6b78df252937dd1')
