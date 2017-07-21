@@ -1,4 +1,4 @@
-all: aileron seshat route159 eunomia
+all: aileron seshat route159 eunomia penna
 
 aileron:
 	cd otf-aileron/ && makepkg -sc && sudo pacman -U otf-aileron-*.pkg.tar.xz
@@ -11,6 +11,9 @@ route159:
 
 eunomia:
 	cd otf-eunomia/ && makepkg -sc && sudo pacman -U otf-eunomia-*.pkg.tar.xz
+
+penna:
+	cd otf-penna/ && makepkg -sc && sudo pacman -U otf-penna-*.pkg.tar.xz
 
 
 clean:

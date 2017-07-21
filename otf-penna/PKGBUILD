@@ -1,0 +1,17 @@
+pkgname=otf-penna
+pkgver=0.100
+pkgrel=1
+pkgdesc='an otf font'
+arch=('any')
+url='http://dotcolon.net/font/penna/'
+license=('ofl')
+depends=('fontconfig' 'xorg-font-utils')
+makedepends=('unzip')
+install=otf.install
+source=(http://dotcolon.net/DL/font/penna.zip)
+
+package() {
+  install -d "$pkgdir/usr/share/fonts/OTF"
+  install -m644 *.otf "$pkgdir/usr/share/fonts/OTF/"
+}
+md5sums=('9612bcd31d1103e4242be39141c57d2b')
