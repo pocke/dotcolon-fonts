@@ -1,0 +1,17 @@
+pkgname=otf-eunomia
+pkgver=0.200
+pkgrel=1
+pkgdesc='an otf font'
+arch=('any')
+url='http://dotcolon.net/font/eunomia/'
+license=('ofl')
+depends=('fontconfig' 'xorg-font-utils')
+makedepends=('unzip')
+install=otf.install
+source=(http://dotcolon.net/DL/font/eunomia_0200.zip)
+
+package() {
+  install -d "$pkgdir/usr/share/fonts/OTF"
+  install -m644 *.otf "$pkgdir/usr/share/fonts/OTF/"
+}
+md5sums=('9ea48f33b3a96808e061be918c1a5e5a')
