@@ -15,6 +15,8 @@ eunomia:
 penna:
 	cd otf-penna/ && makepkg -sc && sudo pacman -U otf-penna-*.pkg.tar.xz
 
+ferrum:
+	cd otf-ferrum/ && makepkg -sc && sudo pacman -U otf-ferrum-*.pkg.tar.xz
 
 clean:
 	rm */*.pkg.tar.xz
