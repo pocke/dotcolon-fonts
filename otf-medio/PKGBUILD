@@ -1,5 +1,5 @@
 pkgname=otf-medio
-pkgver=0.102
+pkgver=0.200
 pkgrel=1
 pkgdesc='an otf font'
 arch=('any')
