@@ -21,5 +21,8 @@ ferrum:
 medio:
 	cd otf-medio/ && makepkg -sc && sudo pacman -U otf-medio-*.pkg.tar.xz
 
+tenderness:
+	cd otf-tenderness/ && makepkg -sc && sudo pacman -U otf-tenderness-*.pkg.tar.xz
+
 clean:
 	rm */*.pkg.tar.xz

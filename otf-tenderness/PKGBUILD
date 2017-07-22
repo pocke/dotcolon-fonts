@@ -1,0 +1,17 @@
+pkgname=otf-tenderness
+pkgver=0.600
+pkgrel=1
+pkgdesc='an otf font'
+arch=('any')
+url='http://dotcolon.net/font/tenderness/'
+license=('ofl')
+depends=('fontconfig' 'xorg-font-utils')
+makedepends=('unzip')
+install=otf.install
+source=(http://dotcolon.net/DL/font/tenderness_0600.zip)
+
+package() {
+  install -d "$pkgdir/usr/share/fonts/OTF"
+  install -m644 *.otf "$pkgdir/usr/share/fonts/OTF/"
+}
+md5sums=('84809d9b092543cad433ee00345c13b3')
