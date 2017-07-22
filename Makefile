@@ -18,5 +18,8 @@ penna:
 ferrum:
 	cd otf-ferrum/ && makepkg -sc && sudo pacman -U otf-ferrum-*.pkg.tar.xz
 
+medio:
+	cd otf-medio/ && makepkg -sc && sudo pacman -U otf-medio-*.pkg.tar.xz
+
 clean:
 	rm */*.pkg.tar.xz

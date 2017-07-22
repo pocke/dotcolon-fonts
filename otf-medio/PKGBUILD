@@ -1,0 +1,17 @@
+pkgname=otf-medio
+pkgver=0.102
+pkgrel=1
+pkgdesc='an otf font'
+arch=('any')
+url='http://dotcolon.net/font/medio/'
+license=('ofl')
+depends=('fontconfig' 'xorg-font-utils')
+makedepends=('unzip')
+install=otf.install
+source=(http://dotcolon.net/DL/font/medio.zip)
+
+package() {
+  install -d "$pkgdir/usr/share/fonts/OTF"
+  install -m644 *.otf "$pkgdir/usr/share/fonts/OTF/"
+}
+md5sums=('2c49335b548f5461a45bad4534fa1b37')
