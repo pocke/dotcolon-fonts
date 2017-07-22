@@ -1,4 +1,4 @@
-all: aileron seshat route159 eunomia penna
+all: aileron seshat route159 eunomia penna ferrum medio tenderness vegur
 
 aileron:
 	cd otf-aileron/ && makepkg -sc && sudo pacman -U otf-aileron-*.pkg.tar.xz
@@ -23,6 +23,9 @@ medio:
 
 tenderness:
 	cd otf-tenderness/ && makepkg -sc && sudo pacman -U otf-tenderness-*.pkg.tar.xz
+
+vegur:
+	cd otf-vegur/ && makepkg -sc && sudo pacman -U otf-vegur-*.pkg.tar.xz
 
 clean:
 	rm */*.pkg.tar.xz
